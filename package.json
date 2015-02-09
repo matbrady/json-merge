@@ -1,12 +1,13 @@
 {
   "name": "json-merge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "merge json data across files'",
   "main": "index.js",
   "dependencies": {
     "concat-stream": "^1.4.6",
     "glob": "^4.0.2",
     "lodash": "^2.4.1",
+    "strip-json-comments": "^1.0.2",
     "underscore.string": "^2.3.3"
   },
   "devDependencies": {},

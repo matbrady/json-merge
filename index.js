@@ -1,8 +1,9 @@
-var fs 		= require('fs');
-var path 	= require('path');
-var glob 	= require('glob');
-var _ 		= require('lodash');
-_.str 		= require('underscore.string');
+var fs 		        = require('fs');
+var path 	        = require('path');
+var glob 	        = require('glob');
+var stripComments = require('strip-json-comments');
+var _ 		        = require('lodash');
+_.str 		        = require('underscore.string');
 
 _.mixin(_.str.exports());
 
@@ -20,7 +21,7 @@ var jsonMerge = function(globString) {
 		var keyName = _.camelize(_.slugify(fileName));
 		var file = fs.readFileSync(filePath, 'utf8');
 
-		data[keyName] = JSON.parse(file);
+		data[keyName] = JSON.parse(stripComments(file));
 	});
 
 	return data;
