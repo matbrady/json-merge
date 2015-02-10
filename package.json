@@ -2,7 +2,7 @@
   "name": "json-merge",
   "version": "0.1.1",
   "description": "merge json data across files'",
-  "main": "index.js",
+  "main": "json-merge",
   "dependencies": {
     "concat-stream": "^1.4.6",
     "glob": "^4.0.2",
@@ -10,10 +10,19 @@
     "strip-json-comments": "^1.0.2",
     "underscore.string": "^2.3.3"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "mocha": "^2.1.0"
   },
-  "author": "Mat Brady",
-  "license": "ISC"
+  "scripts": {
+    "test": "mocha --ui tdd test.js"
+  },
+  "author": {
+    "name": "Mat Brady",
+    "email": "matbr8dy@gmail.com",
+    "url": "matbrady.github.io"
+  },
+  "license": "ISC",
+  "files": [
+    "json-merge.js"
+  ]
 }
